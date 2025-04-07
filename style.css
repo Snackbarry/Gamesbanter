@@ -12,21 +12,29 @@ header {
 nav ul {
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
+  padding: 0;
 }
 nav a {
   text-decoration: none;
   color: #72d0ff;
 }
-.stream {
-  display: flex;
-  justify-content: center;
-  margin: 2rem;
-}
 .about {
   text-align: center;
   padding: 1rem;
+}
+.video-preview {
+  text-align: center;
+  padding: 2rem;
+}
+.video-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 2rem;
 }
 footer {
   text-align: center;
@@ -43,4 +51,16 @@ footer ul {
 footer a {
   color: #72d0ff;
   text-decoration: none;
+}
+.btn {
+  background-color: #304ffe;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  display: inline-block;
+  margin-top: 1rem;
+}
+.stream-button {
+  text-align: center;
 }
