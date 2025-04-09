@@ -1,40 +1,59 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>SnackbarryGaming</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SnackbarryGaming</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1>SnackbarryGaming</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="videos.html">Videos</a>
-            <a href="news.html">News & Releases</a>
-            <a href="reviews.html">Reviews</a>
-            <a href="https://snackbarry.backme.org/" target="_blank">Donate</a>
-            <a href="https://www.twitch.tv/products/sn4ckbarry" target="_blank">Subscribe</a>
-            <a href="https://sn4ckbarry-shop.fourthwall.com/en-eur/" target="_blank">Merch</a>
-        </nav>
-    </header>
-    <main>
-        <section class="intro">
-            <h2>Welcome!</h2>
-            <p>Hello, welcome to my official page on the internet, my name is Barry/Snackbarry and here is where I will do my streams and post game news, drama, releases, delays, reviews and much more! I stream regularly over on <a href="https://www.twitch.tv/sn4ckbarry" target="_blank">Twitch</a> and <a href="https://www.youtube.com/@Snackbarry" target="_blank">YouTube</a>. If you like what you see then make sure to follow/subscribe.</p>
-            <p>For what you can expect: More gaming related content soon!</p>
-        </section>
-        <section class="video-preview">
-            <h3>Latest YouTube Stream</h3>
-            <div class="video-grid">
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/bQv3BeXtSp8" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 SnackbarryGaming</p>
-    </footer>
+  <header>
+    <h1>SnackbarryGaming</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="videos.html">Videos</a>
+      <a href="news.html">News & Releases</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="community.html">Community</a>
+      <a href="login.html">Login</a>
+      <a href="https://snackbarry.backme.org/" target="_blank">Donate</a>
+      <a href="https://www.twitch.tv/products/sn4ckbarry" target="_blank">Subscribe</a>
+      <a href="https://sn4ckbarry-shop.fourthwall.com/en-eur/" target="_blank">Merch</a>
+    </nav>
+    <div class="search-bar">
+      <input type="text" placeholder="Search content..." />
+      <button>Search</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Welcome!</h2>
+      <p>Hello, welcome to my official page on the internet, my name is Barry/Snackbarry and here is where I will do my streams and post game news, drama, releases, delays, reviews and much more! I stream regularly over on <a href="https://www.twitch.tv/sn4ckbarry" target="_blank">Twitch</a> and <a href="https://www.youtube.com/@Snackbarry" target="_blank">YouTube</a>. If you like what you see then make sure to follow/subscribe.</p>
+      <p>For what you can expect: More gaming related content soon!</p>
+    </section>
+
+    <section class="ads">
+      <h3>Sponsored</h3>
+      <div class="ad-banner">Your ad could be here! 🎮</div>
+    </section>
+
+    <section class="game-section">
+      <h3>Play of the Week</h3>
+      <canvas id="gameCanvas" width="300" height="300"></canvas>
+      <p>Score: <span id="score">0</span></p>
+    </section>
+
+    <section class="comments-placeholder">
+      <h3>Comments</h3>
+      <p><em>Comments require login. This feature is coming soon!</em></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 SnackbarryGaming</p>
+  </footer>
+
+  <script src="game.js"></script>
 </body>
 </html>
