@@ -32,38 +32,38 @@ nav a:hover {
     cursor: pointer;
 }
 main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  font-family: Arial, sans-serif;
-}
-
-section {
-  margin-bottom: 40px;
-}
-
-/* Video en game naast elkaar */
-.flex-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-.latest-stream iframe {
-  width: 560px;
-  height: 315px;
-  max-width: 100%;
-}
-
-.game-section {
-  flex: 1;
-  text-align: center;
-}
-
-canvas {
-  background-color: #111;
-  display: block;
-  margin: 0 auto;
-}
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  section {
+    margin-bottom: 40px;
+  }
+  
+  /* Video en game naast elkaar */
+  .flex-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .latest-stream iframe {
+    width: 560px;
+    height: 315px;
+    max-width: 100%;
+  }
+  
+  .game-section {
+    flex: 1;
+    text-align: center;
+  }
+  
+  canvas {
+    background-color: #111;
+    display: block;
+    margin: 0 auto;
+  }
