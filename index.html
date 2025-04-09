@@ -1,21 +1,24 @@
 <main>
   <!-- Introductie -->
   <section class="intro">
-    <!-- Tekst over SnackbarryGaming -->
+    <p>Hello, welcome to my official page on the internet...</p>
   </section>
 
-  <!-- Laatste YouTube stream/video -->
-  <section class="latest-stream">
-    <h3>Latest Stream</h3>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/bQv3BeXtSp8" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-  </section>
+  <!-- Stream en Game naast elkaar -->
+  <div class="flex-row">
+    <!-- Laatste YouTube stream/video -->
+    <section class="latest-stream">
+      <h3>Latest Stream</h3>
+      <iframe src="https://www.youtube.com/embed/bQv3BeXtSp8" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    </section>
 
-  <!-- Spelletje -->
-  <section class="game-section">
-    <h3>Play of the Week</h3>
-    <canvas id="gameCanvas" width="300" height="300"></canvas>
-    <p>Score: <span id="score">0</span></p>
-  </section>
+    <!-- Spelletje -->
+    <section class="game-section">
+      <h3>Play of the Week</h3>
+      <canvas id="gameCanvas" width="300" height="300"></canvas>
+      <p>Score: <span id="score">0</span></p>
+    </section>
+  </div>
 
   <!-- Ads -->
   <section class="ads">
@@ -23,7 +26,7 @@
     <div class="ad-banner">Your ad could be here! 🎮</div>
   </section>
 
-  <!-- Comment placeholder -->
+  <!-- Comments -->
   <section class="comments-placeholder">
     <h3>Comments</h3>
     <p><em>Comments require login. This feature is coming soon!</em></p>
