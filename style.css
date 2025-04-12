@@ -1,65 +1,29 @@
+
 body {
-    font-family: 'Segoe UI', sans-serif;
-    margin: 0;
-    background: linear-gradient(to right, #0b0f2e, #1c1f4a);
+    font-family: 'Press Start 2P', cursive;
+    background-color: #0b0c1a;
     color: white;
+    margin: 0;
+    padding: 0;
 }
-header {
-    background: #11163d;
-    padding: 1rem;
+header, footer {
+    background-color: #1e1f2b;
+    padding: 1em;
     text-align: center;
 }
 nav a {
-    margin: 0 10px;
-    color: #9dcfff;
+    color: #66ccff;
+    margin: 0 15px;
     text-decoration: none;
 }
-nav a:hover {
-    text-decoration: underline;
-}
-.search-bar {
-    margin-top: 1rem;
-}
-.search-bar input {
-    padding: 0.5rem;
-    width: 200px;
-}
-.search-bar button {
-    padding: 0.5rem 1rem;
-    background: #4a90e2;
-    border: none;
-    color: white;
-    cursor: pointer;
-}
 main {
-    max-width: 900px;
-    margin: auto;
-    padding: 2rem;
+    padding: 2em;
 }
-.ads, .game-section, .comments-placeholder {
-    margin-top: 2rem;
-    background: #1c1f4a;
-    padding: 1rem;
-    border-radius: 0.5rem;
+.video-thumb, .game-thumb {
+    margin: 1em 0;
 }
-.ad-banner {
-    background: #273b75;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    font-weight: bold;
-    color: #fff;
-    margin-top: 0.5rem;
+img {
+    width: 200px;
+    height: auto;
 }
-canvas {
-    background: #fff;
-    display: block;
-    margin: 1rem auto;
-    border-radius: 10px;
-}
-footer {
-    background: #0b0f2e;
-    padding: 1rem;
-    text-align: center;
-    color: #ccc;
-    font-size: 0.9rem;
-}
+    
