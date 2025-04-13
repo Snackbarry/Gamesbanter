@@ -2,31 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Games & Fun</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Games & Fun - SnackbarryGaming</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    canvas { background-color: #111; display: block; margin: 0 auto; }
+    .game-container { text-align: center; padding: 2rem; }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Games & Fun</h1>
+    <h1>Games & Fun 🎮</h1>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="videos.html">Videos</a></li>
-        <li><a href="games.html">Games & Fun</a></li>
-        <li><a href="news.html">News</a></li>
-        <li><a href="reviews.html">Reviews</a></li>
-        <li><a href="community.html">Community</a></li>
-        <li><a href="login.html">Login</a></li>
-      </ul>
+      <a href="index.html">Home</a>
+      <a href="videos.html">Videos</a>
+      <a href="news.html">News</a>
     </nav>
   </header>
 
-  <main>
-    <h2>Select a game</h2>
-    <div class="games">
-      <a href="game1.html"><img src="images/pong-thumb.png" alt="Pong" /></a>
-      <a href="game2.html"><img src="images/snake-thumb.png" alt="Snake" /></a>
-    </div>
+  <main class="game-container">
+    <h2>Play Snake!</h2>
+    <canvas id="gameCanvas" width="300" height="300"></canvas>
+    <p>Score: <span id="score">0</span></p>
+    <!-- Je kunt hier later meer games onder zetten zoals Pong -->
   </main>
+
+  <script src="snake.js"></script>
 </body>
 </html>
