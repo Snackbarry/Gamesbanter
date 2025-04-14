@@ -159,13 +159,26 @@
       border: 2px solid red;
     }
   </style>
+  <script defer src="games.js"></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      const latest = games[games.length - 1];
+      const gameContainer = document.getElementById("game-of-the-week");
+      if (gameContainer && latest) {
+        gameContainer.innerHTML = `
+          <h3>Game of the Week</h3>
+          <a href="${latest.url}">
+            <img src="${latest.thumb}" alt="${latest.name}" />
+          </a>
+        `;
+      }
+    });
+  </script>
 </head>
 <body>
   <h2>Games & Fun</h2>
-  <div class="game-links">
-    <a href="snake.html"><img src="https://via.placeholder.com/300x180?text=Snake" alt="Snake" /></a>
-    <a href="pong.html"><img src="https://via.placeholder.com/300x180?text=Pong" alt="Pong" /></a>
-    <a href="tetris.html"><img src="https://via.placeholder.com/300x180?text=Tetris" alt="Tetris" /></a>
+  <div class="highlight" id="game-of-the-week">
+    <!-- Wordt automatisch ingevuld door JS -->
   </div>
 </body>
 </html>
