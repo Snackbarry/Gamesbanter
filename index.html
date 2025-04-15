@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SnackbarryGaming</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background-color: #0d1b2a;
+      color: white;
+    }
+
+    .sidebar {
+      height: 100vh;
+      width: 220px;
+      position: fixed;
+      background-color: red;
+      padding-top: 30px;
+    }
+
+    .sidebar a {
+      padding: 15px 25px;
+      display: block;
+      color: white;
+      text-decoration: none;
+      border-left: 4px solid transparent;
+    }
+
+    .sidebar a:hover {
+      background-color: #415a77;
+      border-left: 4px solid white;
+    }
+
+    main {
+      margin-left: 240px;
+      padding: 20px;
+    }
+
+    section {
+      margin-bottom: 40px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid #1b263b;
+    }
+
+    .highlight {
+      border: 2px solid red;
+      padding: 10px;
+      background-color: #1b263b;
+      box-shadow: 0 0 8px red;
+    }
+
+    h2, h3 {
+      text-shadow: 1px 1px red;
+    }
+
+    h2 {
+      background-color: red;
+      color: white;
+      padding: 10px;
+    }
+
+    .socials a {
+      color: #eee;
+      margin-right: 15px;
+      text-decoration: none;
+    }
+
+    .socials a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <a href="#home">Home</a>
+    <a href="#games">Games & Fun</a>
+    <a href="#news">News & Releases</a>
+    <a href="#reviews">Game Reviews</a>
+    <a href="#forum">Forum</a>
+    <a href="#login">Login</a>
+  </div>
+
+  <main>
+    <section id="home">
+      <h2>SnackbarryGaming</h2>
+
+      <div class="highlight">
+        <h3>Latest Stream</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/bQv3BeXtSp8" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <div class="highlight">
+        <h3>Breaking News</h3>
+        <img src="https://via.placeholder.com/300x180?text=Breaking+News" alt="Breaking News">
+        <p><em>Coming soon: our latest take on gaming releases!</em></p>
+      </div>
+
+      <div class="highlight">
+        <h3>Game of the Week</h3>
+        <a href="games/snake.html">
+          <img src="https://via.placeholder.com/300x180?text=Snake+Game" alt="Game of the Week">
+        </a>
+      </div>
+
+      <div class="highlight socials">
+        <h3>Follow Me</h3>
+        <a href="https://twitch.tv/sn4ckbarry" target="_blank">Twitch</a>
+        <a href="https://youtube.com/@snackbarry?si=rgwr2aXvbRT7y-zd" target="_blank">YouTube</a>
+        <a href="https://www.tiktok.com/@snackbarry" target="_blank">TikTok</a>
+        <a href="https://x.com/Snackbarry1" target="_blank">Twitter/X</a>
+      </div>
+    </section>
+
+    <section id="games">
+      <h3>Games & Fun</h3>
+      <div class="highlight">
+        <a href="games/snake.html"><img src="https://via.placeholder.com/300x180?text=Snake" alt="Snake"></a>
+        <a href="games/pong.html"><img src="https://via.placeholder.com/300x180?text=Pong" alt="Pong"></a>
+        <a href="games/tetris.html"><img src="https://via.placeholder.com/300x180?text=Tetris" alt="Tetris"></a>
+      </div>
+    </section>
+
+    <section id="news">
+      <h3>News & Releases</h3>
+      <p><strong>Coming soon!</strong></p>
+    </section>
+
+    <section id="reviews">
+      <h3>Game Reviews</h3>
+      <p><strong>Coming soon!</strong></p>
+    </section>
+
+    <section id="forum">
+      <h3>Community Forum</h3>
+      <p><strong>Coming soon!</strong></p>
+    </section>
+
+    <section id="login">
+      <h3>Login</h3>
+      <p><strong>Coming soon!</strong></p>
+    </section>
+  </main>
+</body>
+</html>
