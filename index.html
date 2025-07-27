@@ -18,6 +18,32 @@
 .breaking-h2 {
    text-align: left;
 }
+
+.latest-game-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap; /* zorgt voor mobiel dat ze onder elkaar komen */
+}
+
+.latest-game-row h1 {
+  font-size: 2rem;
+  margin: 0;
+  flex: 1;
+}
+
+.snake-logo {
+  width: 440px;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+  border: 3px solid white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+    
 </style>
 
    </head>
@@ -37,13 +63,12 @@
     <!-- thumbnail hier straks -->
   </section>
 
-    <section class="extra-section">
-    <h1>Coming Soon 🕹️</h1>
-    <ul>
-      <li>Starfield DLC</li>
-      <li>GTA VI trailer?</li>
-      <li>Gamescom 2025</li>
-    </ul>
+  <section class="extra-section">
+  <div class="latest-game-row">
+    <h1>Latest game: Snake!🕹️</h1>
+    <a href="games/snake.html">
+    <img src="images/Snake.png" alt="Snake Game Logo" class="snake-logo"></a>
+  </div>
   </section>
 
  
@@ -54,7 +79,7 @@
   <img src="https://img.youtube.com/vi/FZvMuFDij-E/hqdefault.jpg" alt="Amenti Review Thumbnail"></a>
 </section>
 </section>
-
+>
 <section class="bottom-row">
   <section class="latest-stream">
   <h1>LATEST STREAM 🎥</h1>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="gaming, entertainment, information, channel, videos, HTML,CSS,JavaScript"> 
+    <meta name="description" content=" GamesBanter is a gaming channel that focuses on providing entertainment and information content to its viewers.">
+    <meta name="autohor" content="GamesBanter">
+
+    <link rel="preconnect" href="/https://fonts.googleapis.com">
+    <link rel="preconnect" href="/https://fonts.gstatic.com" crossorigin>
+    <link href="/https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+
+
+  <title>Snake</title>
+</head>
+<body>  
+<img src="/images/Gamesbanter5.png" alt="GamesBanter-Banner" class="banner"> 
+<nav class="main-menu">
+  <a href="/index.html" class="nav-button">Home</a>
+   <a href="/news.html" class="nav-button">Gaming news</a>
+   <a href="/reviews.html" class="nav-button">Gaming reviews</a>
+   <a href="/games.html" class="nav-button">Games and fun🎮</a>
+   <a href="/Contact.html" class="nav-button">Contact</a>
+</nav>
+<div class="game-container">
+  <h1>Snake Game</h1>
+  <canvas id="game" width="800" height="800"></canvas>
+  <div class="instructions">
+  <h2>How to Play</h2>
+  <p>Use the arrow keys 'up, down, left, right' to control the snake.</p>
+  <p>Eat a red apple to grow the snake</p>
+
+  <div class="Music volume-controls">
+    <h2>Music Controls</h2>
+    <p>Use the buttons below to control the background music.</p>
+  <audio id="bg-music" src="sounds/Slithering-Shadows.mp3" loop></audio>
+<div style="margin: 20px;">
+  <button onclick="toggleMute()">🔇 Mute</button>
+  <button onclick="changeVolume(0.1)">🔊 Volume +</button>
+  <button onclick="changeVolume(-0.1)">🔉 Volume –</button>
+  <span id="volume-indicator">Volume: 20%</span>
+</div>
+</div>
+</div>
+</div>
+  <script>
+    const canvas = document.getElementById('game');
+    const ctx = canvas.getContext('2d');
+    const grid = 20;
+    let count = 0;
+
+    let snake = {
+      x: 160,
+      y: 160,
+      dx: grid,
+      dy: 0,
+      cells: [],
+      maxCells: 4
+    };
+
+    let apple = {
+      x: 320,
+      y: 320
+    };
+
+    function getRandomInt(min, max) {
+      return Math.floor(Math.random() * (max - min)) + min;
+    }
+
+    function loop() {
+      requestAnimationFrame(loop);
+
+      if (++count < 12) return; 
+      count = 0;
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      snake.x += snake.dx;
+      snake.y += snake.dy;
+
+      
+      if (snake.x < 0) snake.x = canvas.width - grid;
+      else if (snake.x >= canvas.width) snake.x = 0;
+      if (snake.y < 0) snake.y = canvas.height - grid;
+      else if (snake.y >= canvas.height) snake.y = 0;
+
+      snake.cells.unshift({ x: snake.x, y: snake.y });
+
+      if (snake.cells.length > snake.maxCells) {
+        snake.cells.pop();
+      }
+
+      
+      ctx.fillStyle = 'red';
+      ctx.fillRect(apple.x, apple.y, grid - 1, grid - 1);
+
+      
+      ctx.fillStyle = 'lime';
+      snake.cells.forEach((cell, index) => {
+        ctx.fillRect(cell.x, cell.y, grid - 1, grid - 1);
+
+        
+        if (cell.x === apple.x && cell.y === apple.y) {
+          snake.maxCells++;
+          apple.x = getRandomInt(0, 20) * grid;
+          apple.y = getRandomInt(0, 20) * grid;
+        }
+
+        
+        for (let i = index + 1; i < snake.cells.length; i++) {
+          if (cell.x === snake.cells[i].x && cell.y === snake.cells[i].y) {
+            snake.x = 160;
+            snake.y = 160;
+            snake.cells = [];
+            snake.maxCells = 4;
+            snake.dx = grid;
+            snake.dy = 0;
+          }
+        }
+      });
+    }
+
+    
+    const music = document.getElementById('bg-music');
+    music.volume = 0.2;
+    function toggleMute() {
+  music.muted = !music.muted;
+  document.getElementById('volume-indicator').textContent =
+    music.muted ? '🔇 Muted' : `Volume: ${Math.round(music.volume * 100)}%`;
+}
+
+function changeVolume(amount) {
+  let newVolume = music.volume + amount;
+  newVolume = Math.max(0, Math.min(1, newVolume)); // altijd tussen 0 en 1
+  music.volume = newVolume;
+  if (music.muted && newVolume > 0) {
+    music.muted = false; // automatisch unmuten
+  }
+  document.getElementById('volume-indicator').textContent = `Volume: ${Math.round(music.volume * 100)}%`;
+}
+
+    
+    document.addEventListener('keydown', e => {
+      if (music.paused) {
+        music.play().catch(() => console.warn("Autoplay geblokkeerd."));
+      }
+
+      if (e.key === 'ArrowLeft' && snake.dx === 0) {
+        snake.dx = -grid;
+        snake.dy = 0;
+      } else if (e.key === 'ArrowUp' && snake.dy === 0) {
+        snake.dy = -grid;
+        snake.dx = 0;
+      } else if (e.key === 'ArrowRight' && snake.dx === 0) {
+        snake.dx = grid;
+        snake.dy = 0;
+      } else if (e.key === 'ArrowDown' && snake.dy === 0) {
+        snake.dy = grid;
+        snake.dx = 0;
+      }
+    });
+
+    
+    requestAnimationFrame(loop);
+  </script>
+</body>
+</html>
